@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   { title: "Advanced Bookkeeping Services", link: "/services/advanced-bookkeeping" },
@@ -26,12 +27,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="w-[175px] h-[50px] bg-gray-200 flex items-center justify-center text-sm text-gray-500">
-              LOGO
-            </div>
-          </Link>
+{/* Logo */}
+<Link href="/" className="flex items-center">
+  <Image
+    src="/images/logo.png"
+    alt="Sincere Ledger Logo"
+    width={175}
+    height={50}
+    priority
+    className="object-contain"
+  />
+</Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 font-medium text-primary">
