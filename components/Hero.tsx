@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -52,12 +53,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image (Placeholder) */}
-          <div className="flex justify-center">
-            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-              HERO IMAGE
-            </div>
-          </div>
+{/* Right Image */}
+<div className="flex justify-center">
+  <Image
+    src="/images/Hero.png"
+    alt="Sincere Ledger Accounting & Bookkeeping Services"
+    width={450}
+    height={450}
+    priority
+    className="rounded-lg object-contain"
+  />
+</div>
 
         </div>
       </div>
